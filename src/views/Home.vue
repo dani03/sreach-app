@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>home view</h1>
     <div class="flex flex-col items-center p-8 justify-center">
       <input
         type="text"
@@ -16,13 +15,14 @@
         >
           {{ letter }}
         </router-link>
+
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed, onMounted } from "vue";
+import { computed, onMounted, ref } from "vue";
 import store from "../store";
 import axiosClient from "../axiosClient";
 
@@ -30,9 +30,11 @@ const meals = computed(() => store.state.meals);
 const letters = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z".split(
   ","
 );
-onMounted( async () => {
-  const response = await axiosClient.get('/list.php?i=list')
+const ingredients = ref([]);
+onMounted(async () => {
+  const response = await axiosClient.get("/list.php?i=list");
 
-  console.log(response.data)
-})
+  console.log(response.data);
+  ingredients.value = response.data.meals;
+});
 </script>
