@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import MealList from "../views/MealList.vue";
 import SreachByIngredient from "../views/MealByIngredient.vue";
-import SreachByMeals from "../views/MealsByName.vue";
+import MealsByName from "../views/MealsByName.vue";
 import SreachByLetter from "../views/MealByLetter.vue";
 
 const routes = [
@@ -22,9 +22,9 @@ const routes = [
     component: SreachByIngredient,
   },
   {
-    path: "/meals/:meal",
+    path: "/meals/:meal?",
     name: "byMeal",
-    component: SreachByMeals,
+    component: MealsByName,
   },
   {
     path: "/meals",
