@@ -1,11 +1,7 @@
 <template>
   <div>
     <div class="flex flex-col items-center p-8 justify-center">
-      <input
-        type="text"
-        class="rounded border-2 border-gray-200 w-full p-4"
-        placeholder="sreach for meals"
-      />
+      <!-- <MealsByName /> -->
 
       <div class="mt-2 flex justify-center gap-2 space-x-2">
         <router-link
@@ -25,6 +21,7 @@
 import { computed, onMounted, ref } from "vue";
 import store from "../store";
 import axiosClient from "../axiosClient";
+import MealsByName from "./MealsByName.vue";
 
 const meals = computed(() => store.state.meals);
 const letters = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z".split(
