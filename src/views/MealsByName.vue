@@ -29,11 +29,11 @@
             class="border-2 border-gray-200 rounded-md px-4 py-2 text-blue-500 hover:bg-blue-100"
             >Youtube</a
           >
-          <router-link
-            :to="meal.strSource"
+          <a
+            :href="meal.strSource"
             target="_blank"
             class="text-blue-500 hover:underline"
-            >view</router-link
+            >view</a
           >
         </div>
       </div>
