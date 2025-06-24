@@ -4,6 +4,7 @@ import MealList from "../views/MealList.vue";
 import SreachByIngredient from "../views/MealByIngredient.vue";
 import MealsByName from "../views/MealsByName.vue";
 import SreachByLetter from "../views/MealByLetter.vue";
+import MealDetails from "../views/MealDetails.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/meals",
     name: "allMeals",
     component: MealList,
+  },
+  {
+    path: "/meal/:id",
+    name: "mealDetails",
+    component: MealDetails,
   },
 ];
 
