@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center p-8 justify-center">
     <h1 class="text-2xl font-bold mb-4">Meals by Letter</h1>
 
-    <div class="mt-2 flex flex-wrap justify-center items-center gap-2">
+    <div class="mt-2 flex flex-wrap justify-center items-center space-x-2">
       <router-link
         v-for="letter in letters"
         :key="letter"
