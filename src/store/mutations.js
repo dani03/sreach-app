@@ -4,6 +4,11 @@ export function setSreachMeals(state, meals) {
   state.sreachedMeals = meals;
 }
 
+ const  setSreachMealsByletter = (state, meals) => {
+  state.sreachedMealsByletter = meals;
+};
+
 export default {
   setSreachMeals,
+  setSreachMealsByletter,
 };
